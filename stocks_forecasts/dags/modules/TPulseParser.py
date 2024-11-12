@@ -48,8 +48,7 @@ class TPulseParser:
     self.client = TInvestAPI()
     st = self.client.loadAllStocks()
     self.stocks = self.fDb.addStocks(st)
-    #self.stocks = self.fDb.getStocks()
-    #self.client.setStocks(self.stocks)
+    self.client.setStocks(self.stocks)
     self.indicators = self.fDb.getIndicators() 
 
     return
